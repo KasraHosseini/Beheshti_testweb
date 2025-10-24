@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مدرسه هوشمند بهشتی | پرورش استعدادها، ساختن آینده</title>
+    <meta name="description" content="مدرسه هوشمند بهشتی با بیش از ۱۵ سال سابقه درخشان در زمینه آموزش و پرورش، محیطی پویا و خلاق برای دانش‌آموزان فراهم می‌کند" />
+    <link rel="stylesheet" href=".gitignore/swiper-bundle.min.css" />
+    <!-- Bootstrap 5 RTL -->
+    <link rel="stylesheet" href=".gitignore/css/custom.rtl.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href=".gitignore/css/all.min.css" />
+    <!-- Vazirmatn Persian Font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" />
+
+    <style>
+      :root {
+        --primary-blue: #0a007b;
+        --secondary-blue: #2175ff;
+        --light-blue: #58a5ff;
+        --gold: #ffdb00;
+        --light-gold: #ffdb00;
+        --dark-gold: #ffdb00;
+        --white: #ffffff;
+        --light-bg: #e1e1ff;
+        --dark-text: #181827;
+      }
+
+      /* Navbar Styles */
+
+      .navbar.scrolled {
+        backdrop-filter: blur(10px);
+      }
+
+      .navbar-brand {
+        font-weight: 800;
+        font-size: 1.6rem;
+      }
+      .navbar-brand i {
+        font-size: 1.8rem;
+      }
+
+      .nav-link {
+        font-weight: 600;
+        margin-left: 20px;
+        transition: all 0.3s;
+        position: relative;
+        padding: 8px 12px !important;
+        border-radius: 6px;
+      }
+
+      .nav-link:hover {
+        color: var(--light-gold) !important;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .nav-link.active {
+        color: var(--gold) !important;
+        background-color: rgba(212, 175, 55, 0.15);
+      }
+
+      .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 30%;
+        height: 3px;
+        right: 35%;
+        background-color: var(--gold);
+        border-radius: 3px;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-primary-2) 100%);
+        padding: 140px 0 100px;
+        position: relative;
+      }
+      .hero-section * {
+        z-index: 2;
+      }
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,20 Q250,80 500,20 T1000,20 V100 H0 Z" fill="rgba(212, 175, 55, 0.1)"/></svg>');
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+      }
+
+      .hero-title {
+        font-size: 3.4rem;
+        font-weight: 800;
+        margin-bottom: 25px;
+        position: relative;
+      }
+
+      .hero-title span::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--gold);
+        border-radius: 3px;
+      }
+
+      .hero-subtitle {
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+        opacity: 0.9;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+
+      /* Section Styles */
+      .section-title {
+        position: relative;
+        margin-bottom: 60px;
+        font-weight: 800;
+        padding-bottom: 20px;
+        font-size: 2.2rem;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 200px;
+        height: 5px;
+        border-radius: 3px;
+        background: linear-gradient(to right, var(--bs-secondary), var(--bs-primary-3));
+      }
+
+      .section-title.center::after {
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+      /* Feature Boxes */
+      .feature-box {
+        background: var(--white);
+        border-radius: 15px;
+        padding: 40px 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(10, 61, 98, 0.08);
+        transition: all 0.2s ease-out;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature-box:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 18px 40px rgba(10, 61, 98, 0.15);
+      }
+
+      .feature-icon {
+        font-size: 3.8rem;
+        color: var(--primary-blue);
+        margin-bottom: 25px;
+        display: inline-block;
+        padding: 20px;
+        border-radius: 50%;
+        transition: all 0.2s ease-out;
+      }
+
+      .feature-box:hover .feature-icon {
+        transform: scale(1.5) rotate(5deg);
+        color: var(--bs-primary-3);
+      }
+
+      .feature-box h3 {
+        color: var(--primary-blue);
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+      }
+
+      .feature-box p {
+        color: var(--dark-text);
+        line-height: 1.8;
+      }
+
+      /* Cards */
+      .card.h-100 {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(10, 61, 98, 0.08);
+        transition: all 0.4s;
+        overflow: hidden;
+        height: 100%;
+      }
+
+      .card.h-100:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(10, 61, 98, 0.15);
+      }
+
+      .card-img-top {
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .card.h-100:hover .card-img-top {
+        transform: scale(1.05);
+      }
+
+      .card-body {
+        padding: 25px;
+      }
+
+      .card-title {
+        color: var(--primary-blue);
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+      }
+
+      .card-text {
+        color: var(--dark-text);
+        line-height: 1.7;
+      }
+
+      .border-start .card-body::before {
+        content: "\201C";
+        font-size: 5rem;
+        color: var(--bs-secondary);
+        position: absolute;
+        top: -20px;
+        right: 15px;
+        line-height: 1;
+        opacity: 0.7;
+      }
+
+      /* Footer */
+      .footer {
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+        color: var(--white);
+        padding: 70px 0 30px;
+        position: relative;
+      }
+
+      .footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(to right, var(--gold), var(--light-blue));
+      }
+
+      .footer-title {
+        font-weight: 700;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 15px;
+        font-size: 1.4rem;
+      }
+
+      .footer-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--gold);
+      }
+
+      .footer-links a {
+        color: #e0e0e0;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 12px;
+        transition: all 0.3s;
+        position: relative;
+        padding-right: 15px;
+      }
+
+      .footer-links a::before {
+        content: "›";
+        position: absolute;
+        right: 0;
+        transition: all 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: var(--light-gold);
+        transform: translateX(-10px);
+      }
+
+      .footer-links a:hover::before {
+        color: var(--gold);
+      }
+
+      .social-icons a {
+        color: var(--white);
+        font-size: 1.4rem;
+        margin-left: 15px;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .social-icons a:hover {
+        color: var(--primary-blue);
+        background-color: var(--gold);
+        transform: translateY(-5px);
+      }
+
+      .footer-contact p {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+      }
+
+      .footer-contact i {
+        color: var(--gold);
+        margin-left: 10px;
+        width: 20px;
+        text-align: center;
+      }
+
+      /* Back to top button */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(to right, var(--gold), var(--dark-gold));
+        color: var(--primary-blue);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        text-decoration: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s;
+        z-index: 1000;
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        font-weight: bold;
+      }
+
+      .back-to-top.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.6);
+        color: var(--primary-blue);
+      }
+
+      /* Loading animation */
+      .loading-spinner {
+        display: none;
+        width: 40px;
+        height: 40px;
+        margin: 20px auto;
+        border: 4px solid rgba(212, 175, 55, 0.2);
+        border-top: 4px solid var(--gold);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Login Modal */
+      .modal-header {
+        background-color: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .modal-title {
+        font-weight: 700;
+      }
+
+      .btn-close {
+        filter: invert(1);
+      }
+
+      .login-btn {
+        transition: all 0.1s ease-in;
+      }
+      .login-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.227);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.4rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1.3rem;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+        .nav-link {
+          padding-right: 20px;
+        }
+        .navbar-brand {
+          font-size: 1.4rem;
+        }
+        .nav-link.active::after {
+          width: 3px;
+          height: 60%;
+          top: 20%;
+          right: 0;
+        }
+      }
+
+      /* Custom decorative elements */
+      .gold-accent {
+        color: var(--gold);
+      }
+
+      .blue-accent {
+        color: var(--light-blue);
+      }
+
+      .divider {
+        height: 3px;
+        background: linear-gradient(to right, transparent, var(--bs-secondary), transparent);
+        margin: 40px 0;
+        border: none;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 800;
+        display: block;
+        line-height: 1;
+      }
+      .autoplay-progress svg {
+        --progress: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        stroke-width: 4px;
+        stroke: var(--swiper-theme-color);
+        fill: none;
+        stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+        stroke-dasharray: 125.6;
+        transform: rotate(-90deg);
+      }
+      .autoplay-progress {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        z-index: 4;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: var(--bs-primary-2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <i class="fas fa-graduation-cap text-secondary ms-3"></i>
+          مدرسه هوشمند بهشتی
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">خانه</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">درباره ما</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">امکانات</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#news">اخبار</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">نظرات</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">تماس با ما</a>
+            </li>
+          </ul>
+          <button class="btn btn-secondary login-btn rounded-pill me-2" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt me-1"></i> ورود به سامانه</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-light overflow-hidden text-center" id="home">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <h1 class="hero-title">مدرسه هوشمند <span class="text-secondary position-relative">بهشتی</span></h1>
+            <p class="hero-subtitle">مکانی برای پرورش استعدادها و ساختن آینده‌ای درخشان با ترکیبی از آموزش سنتی و فناوری‌های نوین</p>
+            <div class="mt-5">
+              <a href="#about" class="btn btn-secondary p-3 px-5 rounded-pill me-3">درباره ما</a>
+              <a href="#contact" class="btn btn-outline-secondary rounded-pill p-3 px-5">تماس با ما</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Video Section -->
+    <section class="intro-video"></section>
+    <!-- Stats Section -->
+    <section class="py-5 text-primary bg-light">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 col-6 mb-4">
+            <span class="stat-number">۱۵+</span>
+            <span class="stat-label text-dark h4">سال تجربه</span>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <span class="stat-number">۴۲</span>
+            <span class="stat-label text-dark h4">معلم مجرب</span>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <span class="stat-number">۶۸۰</span>
+            <span class="stat-label text-dark h4">دانش‌آموز</span>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <span class="stat-number">۹۶%</span>
+            <span class="stat-label text-dark h4">رضایت اولیا</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="section-title text-primary">درباره مدرسه بهشتی</h2>
+            <p class="lead">
+              مدرسه هوشمند بهشتی با بیش از <span class="text-secondary">۱۵ سال سابقه درخشان</span> در زمینه آموزش و پرورش، همواره در تلاش بوده تا با بهره‌گیری از روش‌های نوین آموزشی و کادری مجرب،
+              محیطی پویا و خلاق برای دانش‌آموزان فراهم کند.
+            </p>
+            <p>
+              ما معتقدیم هر دانش‌آموز استعدادهای منحصر به فردی دارد و وظیفه ما کشف و پرورش این استعدادها در محیطی امن و دوست‌داشتنی است. مدرسه ما با امکانات پیشرفته آموزشی، آزمایشگاه‌های مجهز و فضای
+              ورزشی مناسب، بستری ایده‌آل برای رشد همه‌جانبه دانش‌آموزان فراهم کرده است.
+            </p>
+            <div class="mt-4">
+              <a href="#" class="btn btn-primary-3 btn-lg me-3">بیشتر بخوانید</a>
+              <a href="#" class="btn btn-outline-primary-3 btn-lg">گالری تصاویر</a>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5 mt-lg-0">
+            <img src="Media/hayat.jpg" alt="ساختمان مدرسه" class="img-fluid rounded shadow-lg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light" id="features">
+      <div class="container">
+        <h2 class="section-title text-primary text-center center">چرا مدرسه بهشتی؟</h2>
+        <div class="d-flex align-items-stretch justify-content-md-between justify-content-center flex-row flex-wrap mt-5">
+          <div class="col-md-4">
+            <div class="feature-box border-top border-5 border-primary-2">
+              <div class="feature-icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <h3>معلمان مجرب</h3>
+              <p>کادر آموزشی متعهد و با تجربه با مدرک تحصیلی عالی و روش‌های تدریس نوین</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature-box border-top border-5 border-primary-2">
+              <div class="feature-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3>کلاس‌های هوشمند</h3>
+              <p>استفاده از فناوری‌های روز در آموزش برای یادگیری مؤثرتر و جذاب‌تر</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-box border-top border-5 border-primary-2">
+              <div class="feature-icon">
+                <i class="fas fa-atom"></i>
+              </div>
+              <h3>آزمایشگاه‌های پیشرفته</h3>
+              <p>امکانات کامل آزمایشگاهی برای دروس علوم، فیزیک، شیمی و زیست‌شناسی</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature-box border-top border-5 border-primary-2">
+              <div class="feature-icon">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <h3>کتابخانه غنی</h3>
+              <p>کتابخانه‌ای با هزاران جلد کتاب در زمینه‌های مختلف علمی و ادبی</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-box border-top border-5 border-primary-2">
+              <div class="feature-icon">
+                <i class="fas fa-music"></i>
+              </div>
+              <h3>فعالیت‌های هنری</h3>
+              <p>کلاس‌های موسیقی، نقاشی، تئاتر و سایر فعالیت‌های هنری</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature-box border-top border-5 border-primary-2">
+              <div class="feature-icon">
+                <i class="fas fa-heartbeat"></i>
+              </div>
+              <h3>مراقبت‌های بهداشتی</h3>
+              <p>خدمات بهداشتی و مشاوره‌ای برای سلامت جسمی و روانی دانش‌آموزان</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- News Section -->
+    <section class="py-5" id="news">
+      <div class="container">
+        <h2 class="section-title text-primary">اخبار و رویدادها</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="Media/class.jpg" class="card-img-top" alt="رویداد" />
+              <div class="card-body">
+                <h5 class="card-title">جشنواره علمی سالانه</h5>
+                <p class="card-text">جشنواره علمی سالانه مدرسه با حضور دانش‌آموزان و اولیاء در تاریخ ۱۵ خرداد ماه برگزار خواهد شد.</p>
+                <a href="#" class="btn btn-primary rounded-pill px-3 btn-sm">جزئیات بیشتر</a>
+              </div>
+              <div class="card-footer text-muted bg-light">
+                <small><i class="far fa-clock me-1"></i> ۲ روز پیش</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="Media/football-floor.jpg" class="card-img-top" alt="ورزش" />
+              <div class="card-body">
+                <h5 class="card-title">مسابقات ورزشی منطقه‌ای</h5>
+                <p class="card-text">تیم فوتبال مدرسه ما به مقام قهرمانی در مسابقات منطقه‌ای دست یافت.</p>
+                <a href="#" class="btn btn-primary rounded-pill px-3 btn-sm">جزئیات بیشتر</a>
+              </div>
+              <div class="card-footer bg-light text-muted">
+                <small><i class="far fa-clock me-1"></i> ۱ هفته پیش</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1541336032412-2048a678540d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                class="card-img-top"
+                alt="هنر"
+              />
+              <div class="card-body">
+                <h5 class="card-title">نمایشگاه هنرهای تجسمی</h5>
+                <p class="card-text">آثار هنری دانش‌آموزان در رشته‌های نقاشی، خوشنویسی و طراحی در نمایشگاه مدرسه به نمایش گذاشته می‌شود.</p>
+                <a href="#" class="btn btn-primary rounded-pill px-3 btn-sm">جزئیات بیشتر</a>
+              </div>
+              <div class="card-footer bg-light text-muted">
+                <small><i class="far fa-clock me-1"></i> ۲ هفته پیش</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="#" class="btn btn-outline-primary-3 rounded-pill">مشاهده همه اخبار</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light" id="testimonials">
+      
+      <div class="swiper" id="swiper-slide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card shadow border-0 border-start border-5 border-secondary">
+              <div class="card-body">
+                <div class="d-flex mb-3">
+                  <div class="flex-grow-1 ms-3">
+                    <blockquote class="blockquote mb-0">
+                      <p>به عنوان دانش‌آموز این مدرسه، از فضای دوستانه و حمایتگر معلمان بسیار راضی هستم. آزمایشگاه‌های مدرسه واقعاً عالی هستند و یادگیری را برای ما لذت‌بخش می‌کنند.</p>
+                      <footer class="blockquote-footer mt-3">آقای <cite title="Source Title">حسینی - دانش‌آموز پایه یازدهم</cite></footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card shadow border-0 border-start border-5 border-secondary">
+              <div class="card-body">
+                <div class="d-flex mb-3">
+                  <div class="flex-grow-1 ms-3">
+                    <blockquote class="blockquote mb-0">
+                      <p>به عنوان دانش‌آموز این مدرسه، از فضای دوستانه و حمایتگر معلمان بسیار راضی هستم. آزمایشگاه‌های مدرسه واقعاً عالی هستند و یادگیری را برای ما لذت‌بخش می‌کنند.</p>
+                      <footer class="blockquote-footer mt-3">آقای <cite title="Source Title">حسینی - دانش‌آموز پایه یازدهم</cite></footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card border-0 shadow border-start border-5 border-secondary">
+              <div class="card-body">
+                <div class="d-flex mb-3">
+                  <div class="flex-grow-1 ms-3">
+                    <blockquote class="blockquote mb-0">
+                      <p>به عنوان دانش‌آموز این مدرسه، از فضای دوستانه و حمایتگر معلمان بسیار راضی هستم. آزمایشگاه‌های مدرسه واقعاً عالی هستند و یادگیری را برای ما لذت‌بخش می‌کنند.</p>
+                      <footer class="blockquote-footer mt-3">آقای <cite title="Source Title">حسینی - دانش‌آموز پایه یازدهم</cite></footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card border-0 shadow border-start border-5 border-secondary">
+              <div class="card-body">
+                <div class="d-flex mb-3">
+                  <div class="flex-grow-1 ms-3">
+                    <blockquote class="blockquote mb-0">
+                      <p>به عنوان دانش‌آموز این مدرسه، از فضای دوستانه و حمایتگر معلمان بسیار راضی هستم. آزمایشگاه‌های مدرسه واقعاً عالی هستند و یادگیری را برای ما لذت‌بخش می‌کنند.</p>
+                      <footer class="blockquote-footer mt-3">آقای <cite title="Source Title">حسینی - دانش‌آموز پایه یازدهم</cite></footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24 " r="20"></circle>
+          </svg>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h4 class="footer-title">مدرسه هوشمند بهشتی</h4>
+            <p>مدرسه هوشمند بهشتی با هدف ارائه آموزش‌های با کیفیت و پرورش استعدادهای دانش‌آموزان تأسیس شده است.</p>
+            <div class="social-icons mt-4">
+              <a href="#" class="text-decoration-none"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-decoration-none"><i class="fab fa-telegram"></i></a>
+              <a href="#" class="text-decoration-none"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-decoration-none"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h4 class="footer-title">لینک‌های سریع</h4>
+            <div class="footer-links">
+              <a href="#home">خانه</a>
+              <a href="#about">درباره ما</a>
+              <a href="#features">امکانات</a>
+              <a href="#news">اخبار</a>
+              <a href="#contact">تماس با ما</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h4 class="footer-title">خدمات</h4>
+            <div class="footer-links">
+              <a href="#">سامانه آموزش آنلاین</a>
+              <a href="#">مشاوره تحصیلی</a>
+              <a href="#">برنامه‌های فوق‌العاده</a>
+              <a href="#">کتابخانه دیجیتال</a>
+              <a href="#">سامانه نمرات</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h4 class="footer-title">تماس با ما</h4>
+            <div class="footer-contact">
+              <p><i class="fas fa-map-marker-alt"></i> تهران، خیابان آزادی، کوچه شهید محمدی، پلاک ۱۲</p>
+              <p><i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸</p>
+              <p><i class="fas fa-envelope"></i> info@beheshti-school.ir</p>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4" style="background-color: rgba(255, 255, 255, 0.1)" />
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">© ۱۴۰۲ کلیه حقوق برای مدرسه هوشمند بهشتی محفوظ است.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-0">طراحی و توسعه توسط تیم فناوری مدرسه بهشتی</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">ورود به سامانه</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="username" class="form-label">نام کاربری</label>
+                <input type="text" class="form-control" id="username" required />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">رمز عبور</label>
+                <input type="password" class="form-control" id="password" required />
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe" />
+                <label class="form-check-label" for="rememberMe">مرا به خاطر بسپار</label>
+              </div>
+              <div class="loading-spinner" id="loginSpinner"></div>
+              <button type="submit" class="btn btn-primary w-100" id="loginButton">ورود</button>
+            </form>
+            <div class="text-center mt-3">
+              <a href="#" class="text-decoration-none">رمز عبور خود را فراموش کرده‌اید؟</a>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <p class="mb-0">کاربر جدید هستید؟ <a href="#" class="text-decoration-none">ثبت‌نام کنید</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src=".gitignore//bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src=".gitignore/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+      const progressCircle = document.querySelector(".autoplay-progress svg");
+      const progressContent = document.querySelector(".autoplay-progress span");
+      const swiper = new Swiper("#swiper-slide", {
+        breakpoints:{
+          0:{
+            slidesPerView:1
+          },
+          768:{
+            slidesPerView:2
+          },
+          992:{
+            slidesPerView:3
+          }
+        },
+        pauseOnMouseEnteer: true,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
+        slidesPerView: 3,
+        effect: "coverflow",
+        coverflowEffect: {
+          rotate: 0,
+          slideShadows: false,
+          depth: 50,
+          scale: 0.8,
+          stretch: 50,
+        },
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            progressCircle.style.setProperty("--progress", 1 - progress);
+            progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+          },
+        },
+      });
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Back to top button
+      const backToTopButton = document.querySelector(".back-to-top");
+
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add("active");
+        } else {
+          backToTopButton.classList.remove("active");
+        }
+      });
+
+      backToTopButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({top: 0, behavior: "smooth"});
+      });
+
+      // Login form handling
+      document.getElementById("loginForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const loginButton = document.getElementById("loginButton");
+        const loginSpinner = document.getElementById("loginSpinner");
+
+        // Show loading spinner
+        loginButton.disabled = true;
+        loginSpinner.style.display = "block";
+
+        // Simulate login process
+        setTimeout(function () {
+          // Hide loading spinner
+          loginSpinner.style.display = "none";
+          loginButton.disabled = false;
+
+          // Show success message
+          alert("ورود با موفقیت انجام شد!");
+
+          // Close modal
+          const modal = bootstrap.Modal.getInstance(document.getElementById("loginModal"));
+          modal.hide();
+
+          // Reset form
+          document.getElementById("loginForm").reset();
+        }, 1500);
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Add active class to nav links on scroll
+      window.addEventListener("scroll", function () {
+        let current = "";
+        const sections = document.querySelectorAll("section");
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
