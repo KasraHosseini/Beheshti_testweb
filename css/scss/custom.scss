@@ -1,0 +1,45 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+$enable-cssgrid: true;
+$primary: #0a007b;
+$primary-2: #2175ff;
+$primary-3: #58a5ff;
+$light: #e1e1ff;
+$dark: #181827;
+$secondary: #c7aa00;
+$body-bg: $light;
+$btn-padding-x-lg: 24px;
+$btn-padding-y-lg: 7px;
+$btn-font-size-lg: 18px;
+$input-border-color: $primary;
+$color-theme: (
+  "primary-2": $primary-2,
+  "primary-3": $primary-3,
+);
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+$theme-colors: map-merge($theme-colors, $color-theme);
+//
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/root";
+.navbar-toggler {
+  border: unset !important;
+}
+.navbar {
+  background-color: $primary;
+}
+.navbar.scrolled {
+  background-color: rgba($primary,0.5);
+}
+.intro-video {
+  width: 100%;
+  background-image: url(../../Media/InShot_20251002_123609346.gif);
+  height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+//
+@import "../../node_modules/bootstrap/scss/bootstrap";
