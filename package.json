@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "live-server --port=1234 --no-browser --no-css-inject --watch=../Beheshti-Project"
+    "dev": "live-server --port=1234 --no-browser --no-css-inject --watch=../Beheshti-Project",
+    "rtl": "rtlcss ./css/custom.css ./css/custom.rtl.css"
   },
   "author": "Kasra Hosseini",
   "license": "ISC",

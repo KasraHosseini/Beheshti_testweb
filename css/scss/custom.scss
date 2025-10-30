@@ -12,6 +12,7 @@ $btn-padding-x-lg: 24px;
 $btn-padding-y-lg: 7px;
 $btn-font-size-lg: 18px;
 $input-border-color: $primary;
+$nav-link-font-size: 0.9rem;
 $color-theme: (
   "primary-2": $primary-2,
   "primary-3": $primary-3,
@@ -28,18 +29,31 @@ $theme-colors: map-merge($theme-colors, $color-theme);
 }
 .navbar {
   background-color: $primary;
+  border-radius: 0 0 20px 20px;
+  transition: margin 200ms, border-radius 200ms;
 }
 .navbar.scrolled {
-  background-color: rgba($primary,0.5);
+  background-color: rgba($primary, 0.5);
+  border-radius: 50px;
+  margin: 10px 10px;
 }
 .intro-video {
   width: 100%;
   background-image: url(../../Media/InShot_20251002_123609346.gif);
-  height: 400px;
+  height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  align-items: end;
+  justify-content: center;
 }
-//
+.stats-section {
+  width: 100%;
+  height: fit-content;
+  background: linear-gradient(to bottom, rgba($primary-3,.5), var(--bs-light));
+  backdrop-filter: blur(5px);
+  border-radius: 20px 20px 0 0;
+}
 @import "../../node_modules/bootstrap/scss/bootstrap";
